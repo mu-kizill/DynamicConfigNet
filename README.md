@@ -51,7 +51,7 @@ Tip uyuşmazlığında InvalidCastException
 
 Total tests: 3 | Passed: 3 | Failed: 0
 
-📏 Mimarisi
+ Mimarisi : 
 
 [ React Panel ] → [ ConfigApi ] → [ MSSQL ]
                          ↑
@@ -69,11 +69,31 @@ Reader DLL, uygulama içinden cache + polling ile veri okur
 
 Node.js 18+
 
-Docker Desktop
 
-MSSQL (Docker içinde gelir)
+## 🛢 Veritabanı Kurulumu
 
-📑 Klonlama
+Proje, MSSQL’in bilgisayarda kurulu olması varsayımıyla çalışmaktadır. Docker kullanılmamaktadır.
+
+### 1. MSSQL Express veya LocalDB kurulu olmalı
+
+Örnek instance ismi:
+
+DESKTOP-BEMHJK7\SQLEXPRESS01
+
+
+> Visual Studio ile birlikte gelen MSSQL Express yeterlidir.
+
+---
+
+### 2. `ConfigApi` içindeki `appsettings.Development.json` dosyasını kontrol edin:
+
+```json
+"ConnectionStrings": {
+  "DefaultConnection": "Server=DESKTOP-BEMHJK7\\SQLEXPRESS01;Database=ConfigurationsDb;Trusted_Connection=True;TrustServerCertificate=True;"
+}
+
+
+Klonlama
 
 git clone https://github.com/kullaniciadi/DynamicConfigNet.git
 cd DynamicConfigNet
