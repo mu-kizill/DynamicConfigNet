@@ -14,13 +14,11 @@ Konfigürasyon değerleri cache'de tutulur ve periyodik olarak yenilenir
 
 React + Tailwind tabanlı yönetim paneli
 
-Docker-compose ile tam sistem ayağa kalkar
-
 MSSQL veritabanı desteği
 
 Unit test kapsamlı ve izole çalışabilir
 
-📄 Proje Yapısı
+ Proje Yapısı
 
 DynamicConfigNet/
 ├── ConfigurationReader/           # Dinamik DLL kütüphanesi
@@ -39,7 +37,7 @@ bool isActive = reader.GetValue<bool>("FeatureEnabled");
 Yalnızca IsActive = 1 olan kayıtlar dönülür.
 
 
-🔮 Testler
+ Testler
 
 dotnet test
 
@@ -70,7 +68,7 @@ Reader DLL, uygulama içinden cache + polling ile veri okur
 Node.js 18+
 
 
-## 🛢 Veritabanı Kurulumu
+##  Veritabanı Kurulumu
 
 Proje, MSSQL’in bilgisayarda kurulu olması varsayımıyla çalışmaktadır. Docker kullanılmamaktadır.
 
